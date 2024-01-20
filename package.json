@@ -4,14 +4,14 @@
 	"description": "Eco Mode",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Eco-Mode-WP/Eco-Mode"
+		"url": "git+https://github.com/vraja-pro/review-easy"
 	},
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/Eco-Mode-WP/Eco-Mode/issues"
+		"url": "https://github.com/vraja-pro/review-easy/issues"
 	},
-	"homepage": "https://github.com/Eco-Mode-WP/Eco-Mode#readme",
+	"homepage": "https://github.com/vraja-pro/review-easy#readme",
 	"engines": {
 		"node": "18",
 		"npm": ">=8.1",
