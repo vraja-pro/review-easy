@@ -29,7 +29,7 @@ const Settings = () => {
 	return (
 		<>
 			<PanelBody initialOpen={true} title={__('Eco Mode usage')}>
-				<div className="eco-mode__filter">
+				<div className="review-easy__filter">
 					<span>Filter:</span>
 					<input
 						id={'filter-one'}
@@ -46,15 +46,15 @@ const Settings = () => {
 						onClick={(event) => handleFilter(event)}
 					/>
 				</div>
-				<div className="eco-mode__chart-wrapper">
-					<div className="eco-mode__chart-panel">
+				<div className="review-easy__chart-wrapper">
+					<div className="review-easy__chart-panel">
 						{timeSpanFilter === 'Day' ? (
 							<EcoModePerDayChart />
 						) : (
 							<EcoModePerMonthChart />
 						)}
 					</div>
-					<div className="eco-mode__chart-text">
+					<div className="review-easy__chart-text">
 						<h2>Eco Mode usage</h2>
 						<p>
 							With the ever-increasing impact of digital
@@ -79,7 +79,7 @@ const App = () => {
 export default App;
 
 document.addEventListener('DOMContentLoaded', () => {
-	const htmlOutput = document.getElementById('eco-mode-settings');
+	const htmlOutput = document.getElementById('review-easy-settings');
 
 	if (htmlOutput) {
 		render(<App />, htmlOutput);

@@ -2,7 +2,7 @@
 /**
  * Settings page fields
  *
- * @package Eco-Mode
+ * @package Review-Easy
  */
 
 declare( strict_types=1 );

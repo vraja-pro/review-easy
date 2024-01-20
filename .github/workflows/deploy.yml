@@ -82,7 +82,7 @@ jobs:
             -   name: Check coding standards - CSS
                 run: npm run lint:css
 
-            -   name: 📂 Sync files to eco-mode.confstack.com
+            -   name: 📂 Sync files to review-easy.confstack.com
                 if: ${{ github.ref == 'refs/heads/main' }}
                 uses: SamKirkland/FTP-Deploy-Action@4.3.3
                 with:

@@ -37,4 +37,4 @@ ob_start();
 function block_frontend_template(): string {
 	return __NAMESPACE__ . '\\template';
 }
-add_filter( 'render_callback_eco-mode-calculator', __NAMESPACE__ . '\\block_frontend_template' );
+add_filter( 'render_callback_review-easy-calculator', __NAMESPACE__ . '\\block_frontend_template' );

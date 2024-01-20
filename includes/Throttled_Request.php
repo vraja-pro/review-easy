@@ -2,7 +2,7 @@
 /**
  * Represents a throttled request.
  *
- * @package Eco-Mode
+ * @package Review-Easy
  */
 
 namespace EcoMode\EcoModeWP;

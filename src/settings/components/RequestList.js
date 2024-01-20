@@ -76,31 +76,31 @@ export default function RequestList(props) {
 			);
 
 			return (
-				<div className="eco-mode__table-body-row" key={index}>
-					<div className="eco-mode__table-column url">
+				<div className="review-easy__table-body-row" key={index}>
+					<div className="review-easy__table-column url">
 						{request.post_title
 							.replace('GET_', 'GET - ')
 							.replace('POST_', 'POST - ')}
 					</div>
-					<div className="eco-mode__table-column total">
+					<div className="review-easy__table-column total">
 						{aggregate.total}
 					</div>
-					<div className="eco-mode__table-column avg-runtime">
+					<div className="review-easy__table-column avg-runtime">
 						{parseFloat(aggregate.averageRuntime).toFixed(2)} s
 					</div>
-					<div className="eco-mode__table-column req-size">
+					<div className="review-easy__table-column req-size">
 						{parseFloat(aggregate.totalRequestSize / 1000).toFixed(
 							2,
 						)}{' '}
 						kB
 					</div>
-					<div className="eco-mode__table-column res-size">
+					<div className="review-easy__table-column res-size">
 						{parseFloat(aggregate.totalResponseSize / 1000).toFixed(
 							2,
 						)}{' '}
 						kB
 					</div>
-					<div className="eco-mode__table-column res-adjust">
+					<div className="review-easy__table-column res-adjust">
 						<div>
 							<RequestControl />
 						</div>
@@ -110,24 +110,24 @@ export default function RequestList(props) {
 		});
 
 	return (
-		<div className="eco-mode__table">
-			<div className="eco-mode__table-header">
-				<div className="eco-mode__table-column url">URL</div>
-				<div className="eco-mode__table-column total">Total</div>
-				<div className="eco-mode__table-column avg-runtime">
+		<div className="review-easy__table">
+			<div className="review-easy__table-header">
+				<div className="review-easy__table-column url">URL</div>
+				<div className="review-easy__table-column total">Total</div>
+				<div className="review-easy__table-column avg-runtime">
 					Average runtime
 				</div>
-				<div className="eco-mode__table-column req-size">
+				<div className="review-easy__table-column req-size">
 					Total request size
 				</div>
-				<div className="eco-mode__table-column res-size">
+				<div className="review-easy__table-column res-size">
 					Total response size
 				</div>
-				<div className="eco-mode__table-column res-adjust">
+				<div className="review-easy__table-column res-adjust">
 					Adjust Frequency
 				</div>
 			</div>
-			<div className="eco-mode__table-body">{rows}</div>
+			<div className="review-easy__table-body">{rows}</div>
 		</div>
 	);
 }

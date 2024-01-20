@@ -2,7 +2,7 @@
 /**
  * Add Gutenberg blocks
  *
- * @package Eco-Mode
+ * @package Review-Easy
  */
 
 declare( strict_types=1 );

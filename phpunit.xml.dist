@@ -23,7 +23,7 @@
 	</coverage>
 
 	<testsuites>
-		<testsuite name="Eco-Mode">
+		<testsuite name="Review-Easy">
 			<directory>./tests/</directory>
 		</testsuite>
 	</testsuites>

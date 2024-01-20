@@ -4,12 +4,12 @@
  *
  * Plugin Name:  Eco Mode WP
  * Version:      0.1.0
- * Description:  Reduce the carbon footprint of your website by intelligently preventing unnecessary web-requests and background tasks.
- * Author:       Team Eco-Mode
- * Text Domain:  eco-mode
+ * Description:  Make reviewing process easy.
+ * Author:       Team Review-Easy
+ * Text Domain:  review-easy
  * Requires PHP: 7.4
  *
- * @package Eco-Mode
+ * @package Review-Easy
  */
 
 namespace EcoMode\EcoModeWP;
@@ -31,7 +31,7 @@ define( 'ECO_MODE_DIR_URL', esc_url( plugin_dir_url( __FILE__ ) ) );
 define(
 	'ECO_MODE_BLOCKS_LIST',
 	[
-		'eco-mode-calculator',
+		'review-easy-calculator',
 	]
 );
 

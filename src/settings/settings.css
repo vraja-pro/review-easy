@@ -6,7 +6,7 @@
 	--spacing: 1rem;
 }
 
-#eco-mode-settings {
+#review-easy-settings {
 	--panel-title-background: #053427;
 
 	& .components-panel__body.is-opened {
@@ -26,7 +26,7 @@
 	}
 }
 
-.eco-mode {
+.review-easy {
 	/* Filter */
 	&__filter {
 		align-items: center;

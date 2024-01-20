@@ -1,4 +1,4 @@
-Repo for the Eco-Mode project: https://www.cloudfest.com/eco-mode-reduce-outgoing-network-traffic-of-your-wordpress-server
+Repo for the Review-Easy project: https://www.cloudfest.com/review-easy-reduce-outgoing-network-traffic-of-your-wordpress-server
 
 
 ## Setup

@@ -2,7 +2,7 @@
 /**
  * Https throttler class.
  *
- * @package Eco-Mode
+ * @package Review-Easy
  */
 
 namespace EcoMode\EcoModeWP;

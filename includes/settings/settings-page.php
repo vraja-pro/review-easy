@@ -2,7 +2,7 @@
 /**
  * Settings page
  *
- * @package Eco-Mode
+ * @package Review-Easy
  */
 
 declare( strict_types=1 );
@@ -28,30 +28,30 @@ function settings_assets(): void {
 			];
 
 		wp_register_script(
-			'eco-mode-plugin-script',
+			'review-easy-plugin-script',
 			plugins_url( '../../build/settings/', __FILE__ ) . 'settings.js',
 			$script_dependencies['dependencies'],
 			$script_dependencies['version'],
 			false
 		);
-		wp_enqueue_script( 'eco-mode-plugin-script' );
+		wp_enqueue_script( 'review-easy-plugin-script' );
 	}
 
 	if ( file_exists( ECO_MODE_DIR_PATH . '/build/settings/settings.css' ) ) {
 		wp_register_style(
-			'eco-mode-settings-plugin-style',
+			'review-easy-settings-plugin-style',
 			plugins_url( '../../build/settings/', __FILE__ ) . 'settings.css',
 			[ 'wp-components' ],
 			ECO_MODE_VERSION,
 		);
-		wp_enqueue_style( 'eco-mode-settings-plugin-style' );
+		wp_enqueue_style( 'review-easy-settings-plugin-style' );
 	}
 
 	/**
 	 * Make settings available to the settings page
 	 */
 	\wp_localize_script(
-		'eco-mode-plugin-script',
+		'review-easy-plugin-script',
 		'EcoModeSettings',
 		get_custom_eco_mode_data()
 	);
@@ -63,8 +63,8 @@ function settings_assets(): void {
 function add_settings_page(): void {
 	$page_hook_suffix = add_submenu_page(
 		'options-general.php',
-		__( 'Eco Mode Settings', 'eco-mode' ),
-		__( 'Eco Mode Settings', 'eco-mode' ),
+		__( 'Eco Mode Settings', 'review-easy' ),
+		__( 'Eco Mode Settings', 'review-easy' ),
 		'manage_options',
 		'eco_mode_settings',
 		__NAMESPACE__ . '\\settings_page'
@@ -76,5 +76,5 @@ function add_settings_page(): void {
  * Add React placeholder to settings page
  */
 function settings_page(): void {
-	echo '<div id="eco-mode-settings"></div>';
+	echo '<div id="review-easy-settings"></div>';
 }

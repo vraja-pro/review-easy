@@ -2,7 +2,7 @@
 /**
  * Manages daily-based requests tracking.
  *
- * @package Eco-Mode
+ * @package Review-Easy
  */
 
 namespace EcoMode\EcoModeWP;
