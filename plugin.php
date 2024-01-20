@@ -1,8 +1,8 @@
 <?php
 /**
- * Eco Mode WP
+ * Easy Review WP
  *
- * Plugin Name:  Eco Mode WP
+ * Plugin Name:  Easy Review WP
  * Version:      0.1.0
  * Description:  Make reviewing process easy.
  * Author:       Team Review-Easy

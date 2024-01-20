@@ -1,6 +1,6 @@
 {
 	"name": "review-easy/review-easy",
-	"description": "Eco Mode WP",
+	"description": "Easy Review WP",
 	"type": "wordpress-plugin",
 	"license": "GPL-2.0-or-later",
 	"autoload": {
