@@ -2,10 +2,10 @@
 /**
  * The file that defines the Request_Throttler class.
  *
- * @package EcoMode
+ * @package ReviewEasy
  */
 
-namespace EcoMode\EcoModeWP;
+namespace ReviewEasy\ReviewEasyWP;
 
 use WP_Error;
 
@@ -149,6 +149,6 @@ class Request_Throttler {
 			'limit_response_size' => $parsed_args['limit_response_size'],
 		];
 
-		return 'Eco-mode-wp-' . $throttled_request->method . '-' . $throttled_request->url . '-' . md5( \maybe_serialize( $relevant_args ) );
+		return 'Review-easy-wp-' . $throttled_request->method . '-' . $throttled_request->url . '-' . md5( \maybe_serialize( $relevant_args ) );
 	}
 }

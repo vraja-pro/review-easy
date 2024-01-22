@@ -1,6 +1,6 @@
 <?php //phpcs:ignore WordPress.Files.FileName.NotHyphenatedLowercase
 
-namespace EcoMode\EcoModeWP;
+namespace ReviewEasy\ReviewEasyWP;
 
 /**
  * Class OutgoingRequests

@@ -6,10 +6,10 @@
  */
 import { useMemo } from '@wordpress/element';
 
-function useEcoModeData() {
-	const ecoModeData = useMemo(() => window.EcoModeSettings || {}, []);
+function useReviewEasyData() {
+	const ecoModeData = useMemo(() => window.ReviewEasySettings || {}, []);
 
 	return ecoModeData;
 }
 
-export default useEcoModeData;
+export default useReviewEasyData;

@@ -2,16 +2,16 @@
 /**
  * The file that defines the Alter_Schedule class.
  *
- * @package EcoMode
+ * @package ReviewEasy
  */
 
-namespace EcoMode\EcoModeWP;
+namespace ReviewEasy\ReviewEasyWP;
 
 /**
  * Dummy class to show the idea of autoloading.
  */
 class Alter_Schedule {
-	public const OPTION_NAME = 'eco_mode_registered_alteration';
+	public const OPTION_NAME = 'review_easy_registered_alteration';
 
 	/**
 	 * Registers the scheduled action.

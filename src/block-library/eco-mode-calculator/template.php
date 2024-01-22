@@ -7,7 +7,7 @@
 
 declare( strict_types=1 );
 
-namespace EcoMode\Block\Template;
+namespace ReviewEasy\Block\Template;
 
 /**
  * Render callback template

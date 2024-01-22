@@ -5,7 +5,7 @@
  * @package Review-Easy
  */
 
-namespace EcoMode\EcoModeWP;
+namespace ReviewEasy\ReviewEasyWP;
 
 /**
  * Https alteration class.

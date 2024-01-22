@@ -36,14 +36,14 @@ To reschedule a scheduled event, just call the following line, and replace 'dail
 This needs to be called prior to the actual register hook.
 
 ```php
-\EcoMode\EcoModeWP\Alter_Schedule::reschedule( 'action_name', 'daily' )
+\ReviewEasy\ReviewEasyWP\Alter_Schedule::reschedule( 'action_name', 'daily' )
 ```
 
 ```php
 add_action(
 	'plugins_loaded',
 	function () {
-		\EcoMode\EcoModeWP\Alter_Schedule::reschedule( 'wp_https_detection', 'daily' );
+		\ReviewEasy\ReviewEasyWP\Alter_Schedule::reschedule( 'wp_https_detection', 'daily' );
 	},
 	0
 );
@@ -55,9 +55,9 @@ The goal of this feature is to be able to provide hosts, web owners, etc. a publ
 
 ```php
 add_filter(
-    'eco_mode_wp_throttled_requests',
+    'review_easy_wp_throttled_requests',
     function ( $throttledRequests ) {
-        $throttledRequests[] = new \EcoMode\EcoModeWP\Throttled_Request(
+        $throttledRequests[] = new \ReviewEasy\ReviewEasyWP\Throttled_Request(
             'https://some.spammy.plugin/ping',
             MONTH_IN_SECONDS,
             'GET'
@@ -77,7 +77,7 @@ We take an opinionated approach to disabling core features that most users aren'
 To reactivate the News &amp; Events Widget, you can use the following filter:
 
 ```php
-add_filter( 'eco_mode_disable_wordpress_news_events_widget', '__return_false' );
+add_filter( 'review_easy_disable_wordpress_news_events_widget', '__return_false' );
 ```
 
 ### Settings & Chart

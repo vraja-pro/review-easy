@@ -2,10 +2,10 @@
 /**
  * Handles throttles for wp_version_check.
  *
- * @package EcoMode
+ * @package ReviewEasy
  */
 
-namespace EcoMode\EcoModeWP;
+namespace ReviewEasy\ReviewEasyWP;
 
 /**
  * Handles throttles for wp_version_check.

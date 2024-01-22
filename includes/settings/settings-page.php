@@ -7,9 +7,9 @@
 
 declare( strict_types=1 );
 
-namespace EcoMode\Settings\Page;
+namespace ReviewEasy\Settings\Page;
 
-use function EcoMode\Settings\Fields\get_custom_eco_mode_data;
+use function ReviewEasy\Settings\Fields\get_custom_review_easy_data;
 
 add_action( 'admin_menu', __NAMESPACE__ . '\\add_settings_page', 9 );
 
@@ -18,13 +18,13 @@ add_action( 'admin_menu', __NAMESPACE__ . '\\add_settings_page', 9 );
  */
 function settings_assets(): void {
 
-	if ( file_exists( ECO_MODE_DIR_PATH . '/build/settings/settings.js' ) ) {
-		$script_deps_path    = ECO_MODE_DIR_PATH . '/build/settings/settings.asset.php';
+	if ( file_exists( REVIEW_EASY_DIR_PATH . '/build/settings/settings.js' ) ) {
+		$script_deps_path    = REVIEW_EASY_DIR_PATH . '/build/settings/settings.asset.php';
 		$script_dependencies = file_exists( $script_deps_path ) ?
 			include $script_deps_path :
 			[
 				'dependencies' => [],
-				'version'      => ECO_MODE_VERSION,
+				'version'      => REVIEW_EASY_VERSION,
 			];
 
 		wp_register_script(
@@ -37,12 +37,12 @@ function settings_assets(): void {
 		wp_enqueue_script( 'review-easy-plugin-script' );
 	}
 
-	if ( file_exists( ECO_MODE_DIR_PATH . '/build/settings/settings.css' ) ) {
+	if ( file_exists( REVIEW_EASY_DIR_PATH . '/build/settings/settings.css' ) ) {
 		wp_register_style(
 			'review-easy-settings-plugin-style',
 			plugins_url( '../../build/settings/', __FILE__ ) . 'settings.css',
 			[ 'wp-components' ],
-			ECO_MODE_VERSION,
+			REVIEW_EASY_VERSION,
 		);
 		wp_enqueue_style( 'review-easy-settings-plugin-style' );
 	}
@@ -52,8 +52,8 @@ function settings_assets(): void {
 	 */
 	\wp_localize_script(
 		'review-easy-plugin-script',
-		'EcoModeSettings',
-		get_custom_eco_mode_data()
+		'ReviewEasySettings',
+		get_custom_review_easy_data()
 	);
 }
 
@@ -63,10 +63,10 @@ function settings_assets(): void {
 function add_settings_page(): void {
 	$page_hook_suffix = add_submenu_page(
 		'options-general.php',
-		__( 'Eco Mode Settings', 'review-easy' ),
-		__( 'Eco Mode Settings', 'review-easy' ),
+		__( 'ReviewEasy Settings', 'review-easy' ),
+		__( 'ReviewEasy Settings', 'review-easy' ),
 		'manage_options',
-		'eco_mode_settings',
+		'review_easy_settings',
 		__NAMESPACE__ . '\\settings_page'
 	);
 	add_action( "admin_print_scripts-{$page_hook_suffix}", __NAMESPACE__ . '\\settings_assets' );

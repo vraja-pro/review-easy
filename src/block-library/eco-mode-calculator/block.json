@@ -2,8 +2,8 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
 	"name": "ecom/review-easy-calculator",
-	"title": "Eco Mode Calculator",
-	"description": "Utility to calculate energy savings using this Eco Mode plugin",
+	"title": "ReviewEasy Calculator",
+	"description": "Utility to calculate energy savings using this ReviewEasy plugin",
 	"category": "review-easy",
 	"icon": "calculator",
 	"supports": {

@@ -5,13 +5,13 @@
 	"license": "GPL-2.0-or-later",
 	"autoload": {
 		"psr-4": {
-			"EcoMode\\EcoModeWP\\": "includes/"
+			"ReviewEasy\\ReviewEasyWP\\": "includes/"
 		}
 	},
 	"authors": [
 		{
-			"name": "Christoph Daum",
-			"email": "christoph.daum@ionos.com"
+			"name": "",
+			"email": ""
 		}
 	],
 	"require-dev": {

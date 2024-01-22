@@ -71,6 +71,6 @@ export const data = {
 	],
 };
 
-export default function EcoModePerMonthChart() {
+export default function ReviewEasyPerMonthChart() {
 	return <Bar options={options} data={data} />;
 }

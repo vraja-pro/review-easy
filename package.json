@@ -1,7 +1,7 @@
 {
 	"name": "review-easy",
 	"version": "0.1.0",
-	"description": "Eco Mode",
+	"description": "Easy Review Plugin for WordPress",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/vraja-pro/review-easy"

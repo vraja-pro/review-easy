@@ -54,7 +54,7 @@
 	<rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
 		<properties>
 			<property name="rootNamespaces" type="array">
-				<element key="includes" value="EcoMode\EcoModeWP"/>
+				<element key="includes" value="ReviewEasy\ReviewEasyWP"/>
 			</property>
 		</properties>
 	</rule>

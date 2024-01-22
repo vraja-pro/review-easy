@@ -7,9 +7,9 @@ import { render, useState, useCallback } from '@wordpress/element';
 /**
  * Internal dependencies
  */
-import useEcoModeData from './components/data';
-import EcoModePerDayChart from './components/EcoModePerDayChart';
-import EcoModePerMonthChart from './components/EcoModePerMonthChart';
+import useReviewEasyData from './components/data';
+import ReviewEasyPerDayChart from './components/ReviewEasyPerDayChart';
+import ReviewEasyPerMonthChart from './components/ReviewEasyPerMonthChart';
 import RequestList from './components/RequestList';
 
 const Settings = () => {
@@ -21,14 +21,14 @@ const Settings = () => {
 		setActive(event.target.id);
 	}, []);
 
-	const ecoModeData = useEcoModeData();
+	const ecoModeData = useReviewEasyData();
 	// Get data.
 	// console.log(ecoModeData);
 	//ecoModeData?.file_mods?.prevented_requests
 
 	return (
 		<>
-			<PanelBody initialOpen={true} title={__('Eco Mode usage')}>
+			<PanelBody initialOpen={true} title={__('ReviewEasy usage')}>
 				<div className="review-easy__filter">
 					<span>Filter:</span>
 					<input
@@ -49,13 +49,13 @@ const Settings = () => {
 				<div className="review-easy__chart-wrapper">
 					<div className="review-easy__chart-panel">
 						{timeSpanFilter === 'Day' ? (
-							<EcoModePerDayChart />
+							<ReviewEasyPerDayChart />
 						) : (
-							<EcoModePerMonthChart />
+							<ReviewEasyPerMonthChart />
 						)}
 					</div>
 					<div className="review-easy__chart-text">
-						<h2>Eco Mode usage</h2>
+						<h2>ReviewEasy usage</h2>
 						<p>
 							With the ever-increasing impact of digital
 							technology on our planet, it’s more important than

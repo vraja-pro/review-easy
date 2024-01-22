@@ -70,6 +70,6 @@ export const data = {
 	],
 };
 
-export default function EcoModePerDayChart() {
+export default function ReviewEasyPerDayChart() {
 	return <Bar options={options} data={data} />;
 }

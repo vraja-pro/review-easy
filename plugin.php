@@ -12,7 +12,7 @@
  * @package Review-Easy
  */
 
-namespace EcoMode\EcoModeWP;
+namespace ReviewEasy\ReviewEasyWP;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	header( 'Status: 403 Forbidden' );
@@ -20,16 +20,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit();
 }
 
-$ecomode_blog_autoloader = __DIR__ . '/vendor/autoload.php';
-if ( is_readable( $ecomode_blog_autoloader ) ) {
-	require_once $ecomode_blog_autoloader;
+$revieweasy_blog_autoloader = __DIR__ . '/vendor/autoload.php';
+if ( is_readable( $revieweasy_blog_autoloader ) ) {
+	require_once $revieweasy_blog_autoloader;
 }
 
-define( 'ECO_MODE_VERSION', '0.1.0' );
-define( 'ECO_MODE_DIR_PATH', plugin_dir_path( __FILE__ ) );
-define( 'ECO_MODE_DIR_URL', esc_url( plugin_dir_url( __FILE__ ) ) );
+define( 'REVIEW_EASY_VERSION', '0.1.0' );
+define( 'REVIEW_EASY_DIR_PATH', plugin_dir_path( __FILE__ ) );
+define( 'REVIEW_EASY_DIR_URL', esc_url( plugin_dir_url( __FILE__ ) ) );
 define(
-	'ECO_MODE_BLOCKS_LIST',
+	'REVIEW_EASY_BLOCKS_LIST',
 	[
 		'review-easy-calculator',
 	]
@@ -52,17 +52,17 @@ function init(): void {
 	\register_deactivation_hook( __FILE__, __NAMESPACE__ . '\do_deactivation_hook' );
 
 	/**
-	 * Allows the user to fully customize the Eco Mode, by replacing the mode function by a plugin of your own.
+	 * Allows the user to fully customize the ReviewEasy, by replacing the mode function by a plugin of your own.
 	 *
 	 * Example:
 	 *
 	 * By adding
-	 * add_filter( 'eco_mode_wp_select_mode', function() { return 'EcoMode\EcoModeWP\developer_mode'; } );
+	 * add_filter( 'review_easy_wp_select_mode', function() { return 'ReviewEasy\ReviewEasyWP\developer_mode'; } );
 	 * To your code, you will be running in developer mode, or you simply replace the complete function.
 	 *
 	 * @param callable $callback The Callback function.
 	 */
-	call_user_func( apply_filters( 'eco_mode_wp_select_mode', __NAMESPACE__ . '\normal_mode' ) );
+	call_user_func( apply_filters( 'review_easy_wp_select_mode', __NAMESPACE__ . '\normal_mode' ) );
 }
 
 /**
@@ -75,7 +75,7 @@ function init(): void {
  * @since 0.1.0
  */
 function filter_requests( array $throttled_requests ): array {
-	$throttled_requests = (array) \apply_filters( 'eco_mode_wp_throttled_requests', $throttled_requests );
+	$throttled_requests = (array) \apply_filters( 'review_easy_wp_throttled_requests', $throttled_requests );
 	$throttled_requests = \array_filter(
 		$throttled_requests,
 		function ( $throttled_request ) {
@@ -92,7 +92,7 @@ function filter_requests( array $throttled_requests ): array {
  * @since 0.1.0
  */
 function normal_mode() {
-	do_action( 'eco_mode_wp_mode_start', 'normal' );
+	do_action( 'review_easy_wp_mode_start', 'normal' );
 	$throttled_requests = [
 		// Throttle Recommended PHP Version Checks from Once a Week to Once a Month.
 		new Throttled_Request( 'http://api.wordpress.org/core/serve-happy/1.0/', \MONTH_IN_SECONDS, 'GET' ),
@@ -111,7 +111,7 @@ function normal_mode() {
 	add_filter( 'http_request_args', [ $outgoing_requests, 'start_request_timer' ] );
 	add_action( 'http_api_debug', [ $outgoing_requests, 'capture_request' ], 10, 5 );
 
-	do_action( 'eco_mode_wp_mode_end', 'normal' );
+	do_action( 'review_easy_wp_mode_end', 'normal' );
 }
 
 /**
@@ -120,7 +120,7 @@ function normal_mode() {
  * @since 0.1.0
  */
 function developer_mode() {
-	do_action( 'eco_mode_wp_mode_start', 'developer' );
+	do_action( 'review_easy_wp_mode_start', 'developer' );
 	$throttled_requests = [
 		// Throttle Recommended PHP Version Checks from Once a Week to Once a Month.
 		new Throttled_Request( 'http://api.wordpress.org/core/serve-happy/1.0/', \MONTH_IN_SECONDS, 'GET' ),
@@ -140,7 +140,7 @@ function developer_mode() {
 	add_filter( 'http_request_args', [ $outgoing_requests, 'start_request_timer' ] );
 	add_action( 'http_api_debug', [ $outgoing_requests, 'capture_request' ], 10, 5 );
 
-	do_action( 'eco_mode_wp_mode_end', 'developer' );
+	do_action( 'review_easy_wp_mode_end', 'developer' );
 }
 
 add_action( 'init', __NAMESPACE__ . '\init', 0 );

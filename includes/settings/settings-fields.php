@@ -7,9 +7,9 @@
 
 declare( strict_types=1 );
 
-namespace EcoMode\Settings\Fields;
+namespace ReviewEasy\Settings\Fields;
 
-use EcoMode\EcoModeWP\Outgoing_Requests;
+use ReviewEasy\ReviewEasyWP\Outgoing_Requests;
 
 add_action( 'init', __NAMESPACE__ . '\\register_plugin_settings', 10 );
 
@@ -20,11 +20,11 @@ add_action( 'init', __NAMESPACE__ . '\\register_plugin_settings', 10 );
  */
 function register_plugin_settings(): void {
 	register_setting(
-		'eco_mode_settings',
-		'eco_mode_data',
+		'review_easy_settings',
+		'review_easy_data',
 		[
 			'type'              => 'string',
-			'description'       => 'Eco Mode Settings',
+			'description'       => 'ReviewEasy Settings',
 			'sanitize_callback' => __NAMESPACE__ . '\\sanitize_plugin_settings',
 			'show_in_rest'      => true,
 		]
@@ -36,18 +36,18 @@ function register_plugin_settings(): void {
  *
  * @return array
  */
-function get_custom_eco_mode_data(): array {
+function get_custom_review_easy_data(): array {
 	// Setup data array.
 	$data = [
-		'custom_eco_mode_data' => [],
+		'custom_review_easy_data' => [],
 		'daily_savings'        => [],
 		'requests'             => Outgoing_Requests::get_data(),
 	];
 
 	// Get prevented requests data.
-	$eco_mode_data = get_option( 'eco_mode_prevented_requests' );
-	if ( $eco_mode_data ) {
-		$data['custom_eco_mode_data'] = $eco_mode_data;
+	$review_easy_data = get_option( 'review_easy_prevented_requests' );
+	if ( $review_easy_data ) {
+		$data['custom_review_easy_data'] = $review_easy_data;
 	}
 
 	// Get daily savings data.

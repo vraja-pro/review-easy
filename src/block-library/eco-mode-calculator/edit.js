@@ -5,7 +5,7 @@
 function Edit() {
 	return (
 		<div className="review-easy-calculator-editor">
-			<h2>Eco Mode Calculator</h2>
+			<h2>ReviewEasy Calculator</h2>
 		</div>
 	);
 }

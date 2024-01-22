@@ -1,8 +1,8 @@
 <?php
 
-namespace EcoMode\EcoModeWP\Tests\Includes;
+namespace ReviewEasy\ReviewEasyWP\Tests\Includes;
 
-use EcoMode\EcoModeWP\Throttled_Request;
+use ReviewEasy\ReviewEasyWP\Throttled_Request;
 use PHPUnit\Framework\TestCase;
 
 /**
